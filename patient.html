@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>YOUR HOSPITAL-Patient Form</title>
+    <style>
+  body{
+    color: rgb(0,120,120);
+    margin-left: 10%;
+    font-size: 30px;
+    background-color: #ffdfd6;
+  }
+  .topnav{
+    right: 0%;
+    left:0%;
+    top: 0%;
+    position: fixed;
+    display: grid;
+    height: 52.5px;
+    /* grid-template-columns: 180px 94px 196.5px 94px 111.5px 125.5px 128.5px 200px ; */
+    /* grid-template-columns: 180px 94px 243.99px 117px 131px 153.5px 150px 200px ; */
+    grid-template-columns: 180px 94px 243.99px 117px 153.5px 150px 200px ;
+  }
+  .topnav,button {
+    background-color: #640000;
+    overflow: hidden;
+  }
+
+  .topnav a button{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover button{
+    background-color: #f70d10;
+    color: black;
+  }
+
+  .topnav a.active button{
+    background-color: #b20000;
+    color: white;
+  }
+  .form{
+		box-sizing: border-box;
+		width: 90%;
+    /* border: 2px solid grey; */
+		border: 2.5px solid #FF6F61;
+    border-radius:20px;
+		float: left;
+		align-content: center;
+		align-items: center;
+    margin: 2% 0%;
+    height:95%;
+    background: #D3D3D3;
+    /* background: rgb(230,103,113,0.5); */
+    /* background: #D3D3D3; */
+	}
+	form {
+		margin: 0 auto;
+		width: 600px;
+	}
+  input{
+    border: 2px solid red;
+    border-radius: 5px;
+    width: 50%;
+    height: 6%;
+  }
+  #sub{
+    align-self:center;
+    width:10%;
+  }
+  h1{
+    align:center;
+  }
+  </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="homepage.php"> <img src="https://surreyandsussex.nhs.uk/wp-content/uploads/2013/11/2013-11_Your-Hospital_Logo-full-PNG24.png" alt="LOGO" width="150" height="48"></a>
+      <a href="homepage.php"><button type="button" name="button">HOME</button></a>
+      <a class="active" href="patient.html"><button type="button" name="button">PATIENT REGISTRATION</button></a>
+      <a href="doctor.php"><button type="button" name="button">DOCTOR</button></a>
+      <!-- <a href="about.html"><button type="button" name="button">ABOUT US</button></a> -->
+      <a href="contact.html"><button type="button" name="button">CONTACT US</button></a>
+      <a href="ambulance.php"><button type="button" name="button">AMBULANCE</button></a>
+      <a href="login.html"><button type="button" name="button">LOGIN</button></a>
+    </div>
+    <br>
+    <p><img src="https://somnomed.com/wp-content/uploads/2017/09/Patient_banner-4.png" alt="COVID-19 CASES DISCRIPTION" align="center" style="height:3%; width:89.75%; border-radius:15px; "></p>
+    <div class="form">
+      <h1 align="center">Patient Registration Form</h1>
+      <!-- <form id="myForm" action="patient.php" method="post"> -->
+      <form id="myForm" action="patient.php" method="post">
+        <label for="name">Name:  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+        <input id="name" type="text" name="name" value="" placeholder="NAME IN CAPITAL"><br>
+        <font size="+1"><label id="nameerror"></label></font>
+        <br><br>
+        <label for="age">Age:  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+        <input id="age" type="text" name="age" value="" placeholder="Enter age between 0 to 99"><br>
+        <font size="+1"><label id="ageerror"></label></font>
+        <br><br>
+        <label for="gender">gender:  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+        <input id="gen" type="text" name="gender" value="" placeholder="M-male or F-female or O-other"><br>
+        <font size="+1"><label id="gendererror"></label></font>
+        <br><br>
+        <label for="covid">covid:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+        <input id="cov" type="text" name="covid" value="" placeholder="+ve-Positive or -ve-Negative or ntd-not tested"><br>
+        <font size="+1"><label id="covidrerror"></label></font>
+        <br><br>
+        <label for="add">Address: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input id="address" type="text" name="add" value="" placeholder="Enter Address in 100 words"><br>
+        <font size="+1"><label id="adderror"></label></font>
+        <br><br>
+        <label for="tname">Other test name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input id="test" type="text" name="tname" value="" placeholder="Test name"><br>
+        <font size="+1"><label id="testerror"></label></font>
+        <br><br>
+        <label for="eml">Email: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input id="email" type="email" name="eml" value="" placeholder="abc@gmail.com"><br>
+        <font size="+1"><label id="emailerror"></label></font>
+        <br><br>
+        <label for="addhNo">Addhar Number: &nbsp; &nbsp;&nbsp;</label>
+        <input id="Addhar" type="text" name="addhNo" value="" placeholder="0000 0000 0000"><br>
+        <font size="+1"><label id="addnoerror"></label></font>
+        <br><br>
+        <label for="pass">Password: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input id="pass" type="password" name="pass" value="" placeholder="Please include special char, num and capital latter."><br>
+        <font size="+1"><label id="passerror"></label></font>
+        <br><br>
+        <label for="pass">Confirm Password: &nbsp;</label>
+        <input id="passcheck" type="password" name="pass" value="" placeholder="Please re-enter password correctly."><br>
+        <font size="+1"><label id="passcheckerror"></label></font>
+        <br><br>
+        <input style="width:100px; background:yellow; font-size:18px;" type="button" name="pro" onclick="validateForm()" value="Check">
+        <input style="width:150px; background:rgb(1,255,1,0.9); font-size:18px;" type="button" name="pro" onclick="procedevalidate()" value="Please Proceed ">
+        <br><br><br>
+      </form>
+      </div>
+      <br>
+      <br>
+      <script type="text/javascript">
+        var con1=false;
+        var con2=false;
+        var con3=false;
+        var con4=false;
+        var con5=false;
+        var con6=false;
+        var con7=false;
+        var con8=false;
+        var con9=false;
+        var con10=false;
+        function validateForm(){
+          var name=document.getElementById("name").value;
+          var name_t=/([A-Z]{2,20})/;
+          if(name_t.test(name)){
+            con1=true;
+            document.getElementById("nameerror").innerHTML="*Valid*";
+            document.getElementById("nameerror").style.color="red";
+          }else if(name===""){
+            document.getElementById("nameerror").innerHTML="*Please fill the field.*";
+            document.getElementById("nameerror").style.color="red";
+          }else{
+            con1=false;
+            document.getElementById("nameerror").innerHTML="*Invalid, please enter name in capital letters and without special character*";
+            document.getElementById("nameerror").style.color="red";
+          }
+          var agechar=document.getElementById("age").value;
+          var age;
+          if(agechar===''){
+            age=-1;
+          }else{
+            age=parseInt(agechar);
+          }
+          if(age<99 && age>=0){
+            con2=true;
+            document.getElementById("ageerror").innerHTML="*Valid*";
+            document.getElementById("ageerror").style.color="red";
+          }else if(age===-1){
+            con2=false;
+            document.getElementById("ageerror").innerHTML="*please fill the field.*";
+            document.getElementById("ageerror").style.color="red";
+          }else{
+            con2=false;
+            document.getElementById("ageerror").innerHTML="*Invalid, please enter age in required range.*";
+            document.getElementById("ageerror").style.color="red";
+          }
+          var gen=document.getElementById("gen").value;
+          if(gen==='M'||gen==='F'||gen==='O'||gen==='m'||gen==='f'||gen==='o'){
+            con3=true;
+            document.getElementById("gendererror").innerHTML="*Valid*";
+            document.getElementById("gendererror").style.color="red";
+          }else if(gen===''){
+            con3=false;
+            document.getElementById("gendererror").innerHTML="*please fill the field.*";
+            document.getElementById("gendererror").style.color="red";
+          }else{
+            con3=false;
+            document.getElementById("gendererror").innerHTML="*Invalid, please enter M or F or O.*";
+            document.getElementById("gendererror").style.color="red";
+          }
+          var covid=document.getElementById("cov").value;
+          if(covid==='+ve'||covid==='-ve'||covid==='+VE'||covid==='-VE'||covid==='NTD'||covid==='ntd'){
+            con4=true;
+            document.getElementById("covidrerror").innerHTML="*Valid*";
+            document.getElementById("covidrerror").style.color="red";
+          }else if(!covid){
+            con4=false;
+            document.getElementById("covidrerror").innerHTML="*please fill the field.*";
+            document.getElementById("covidrerror").style.color="red";
+          }else{
+            con4=false;
+            document.getElementById("covidrerror").innerHTML="*Invalid, please enter -ve or +ve or ntd.*";
+            document.getElementById("covidrerror").style.color="red";
+          }
+          // var con5=false;
+          var add=document.getElementById("address").value;
+          var add_t=/([a-zA-Z0-9]{1,25})+(.{0,25})+([a-zA-Z0-9]{1,25})/;
+          // var add_t=/(^[a-zA-Z0-9]{1,75}))/;
+          if(add_t.test(add)){
+            con5=true;
+            document.getElementById("adderror").innerHTML="*Valid*";
+            document.getElementById("adderror").style.color="red";
+          }else if(!add){
+            document.getElementById("adderror").innerHTML="*Please fill the field.*";
+            document.getElementById("adderror").style.color="red";
+          }else{
+            con5=false;
+            document.getElementById("adderror").innerHTML="*Invalid, please fill the field, and length of address should not be greater then 75 words.*";
+            document.getElementById("adderror").style.color="red";
+          }
+          // var con6=false;
+          var test=document.getElementById("test").value;
+          // var add_t=/([a-zA-Z0-9]{1,25})+(.{0,25})+([a-zA-Z0-9]{1,25})/;
+          var test_t=/([a-zA-Z0-9]{1,75})/;
+          if(test_t.test(test)){
+            con6=true;
+            document.getElementById("testerror").innerHTML="*Valid*";
+            document.getElementById("testerror").style.color="red";
+          }else if(!test){
+            document.getElementById("testerror").innerHTML="*Please fill the field.*";
+            document.getElementById("testerror").style.color="red";
+          }else{
+            con6=false;
+            document.getElementById("testerror").innerHTML="*Invalid, please fill the field and do not use special character or length of name of test should not be greater then 75 words.*";
+            document.getElementById("testerror").style.color="red";
+          }
+          // var con7=false;
+          var email=document.getElementById("email").value;
+          var email_t=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)([a-z]{2,8})(.[a-z]{2,8})(.[a-z]{2,8})?$/;
+          if(email_t.test(email)){
+            con7=true;
+            document.getElementById("emailerror").innerHTML="*Valid*";
+            document.getElementById("emailerror").style.color="red";
+          }else if(!email){
+            document.getElementById("emailerror").innerHTML="*Please fill the field.*";
+            document.getElementById("emailerror").style.color="red";
+          }else{
+            con7=false;
+            document.getElementById("emailerror").innerHTML="*Invalid*";
+            document.getElementById("emailerror").style.color="red";
+          }
+          // var con8=false;
+          var addh=document.getElementById("Addhar").value;
+          var addh_t=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+          // console.log(addh);
+          if(addh_t.test(addh)){
+            con8=true;
+            document.getElementById("addnoerror").innerHTML="*Valid*";
+            document.getElementById("addnoerror").style.color="red";
+          }else if(!addh){
+            con8=false;
+            document.getElementById("addnoerror").innerHTML="*Please fill the field.*";
+            document.getElementById("addnoerror").style.color="red";
+          }else{
+            con8=false;
+            document.getElementById("addnoerror").innerHTML="*Invalid, please enter 12 digit number with proper space.*";
+            document.getElementById("addnoerror").style.color="red";
+          }
+          var pass=document.getElementById("pass").value;
+          var pass_t=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}/;
+          if(pass_t.test(pass)){
+            con9=true;
+            document.getElementById("passerror").innerHTML="*Valid*";
+            document.getElementById("passerror").style.color="red";
+            var passchk=document.getElementById("passcheck").value;
+            if(pass===passchk){
+              con10=true;
+              document.getElementById("passcheckerror").innerHTML="*Valid, password matched.*";
+              document.getElementById("passcheckerror").style.color="red";
+            }else if(!passchk){
+              con10=false;
+              document.getElementById("passcheckerror").innerHTML=" *Please re-enter the password to verify.*";
+              document.getElementById("passcheckerror").style.color="red";
+            }else{
+              con10=false;
+              document.getElementById("passcheckerror").innerHTML="*Inalid, please re-enter password properly.*";
+              document.getElementById("passcheckerror").style.color="red";
+            }
+          }else if(!pass && !passchk){
+            con9=false;
+            con10=false;
+            document.getElementById("passerror").innerHTML=" *Please fill the password filed.*";
+            document.getElementById("passerror").style.color="red";
+            document.getElementById("passcheckerror").innerHTML=" *Please fill the password filed and then verify.*";
+            document.getElementById("passcheckerror").style.color="red";
+          }
+          else{
+            con9=false;
+            con10=false;
+            document.getElementById("passerror").innerHTML="*Invalid, password must contail atleast one number, capital letter and special character.*";
+            document.getElementById("passerror").style.color="red";
+            document.getElementById("passcheckerror").innerHTML="*Please re-enter the password properly.*";
+            document.getElementById("passcheckerror").style.color="red";
+          }
+        }
+          // console.log(con1 && con2 && con3 && con4 && con5 && con6 && con7 && con8 && con9 && con10);
+          // if(con1 && con2 && con3 && con4 && con5 && con6 && con7 && con8 && con9 && con10){
+          //   console.log(true);
+          // }else{
+          //   validateForm();
+          //   alert("Please fill all the field and try again.");
+          // }
+        function procedevalidate(){
+          validateForm();
+          if(con1 && con2 && con3 && con4 && con5 && con6 && con7 && con8 && con9 && con10){
+            console.log(true);
+            // location.replace("patient.php");
+            document.getElementById("myForm").submit();
+          }else{
+            alert("Please fill all the field and match the required format, and then try again.");
+          }
+        }
+        // function myFunction() {
+        //   validateForm();
+        //   if(con1 && con2 && con3 && con4 && con5 && con6 && con7 && con8 && con9 && con10){
+        //     console.log(true);
+        //     // location.replace("patient.php");
+        //     document.getElementById("myForm").submit();
+        //   }else{
+        //     alert("Please fill all the field and try again.");
+        //   }
+        //
+        // }
+      </script>
+
+    <!-- <h1>Hello there!</h1> -->
+  </body>
+</html>

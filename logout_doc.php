@@ -1,0 +1,9 @@
+<?php
+session_start();
+$temp=$_SESSION['logout_doc'];
+unset($_SESSION["doc_id"]);
+unset($_SESSION["doc_pass"]);
+unset($_SESSION["logout_doc"]);
+session_destroy();
+header("Location:$temp");
+?>

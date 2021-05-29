@@ -1,0 +1,9 @@
+<?php
+session_start();
+$temp=$_SESSION['logout_staff'];
+unset($_SESSION["staff_email"]);
+unset($_SESSION["staff_pass"]);
+unset($_SESSION["logout_staff"]);
+session_destroy();
+header("Location:$temp");
+?>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>YOUR HOSPITAL-Staff Login</title>
+    <style>
+      body{
+        color: #53D053;
+        margin-left: 10%;
+        background-color: #ffdfd6;
+      }
+      .topnav{
+        right: 0%;
+        left:0%;
+        top: 0%;
+        position: fixed;
+        display: grid;
+        /* grid-template-columns: 180px 94px 243.99px 117px 131px 153.5px 150px 200px ; */
+        grid-template-columns: 180px 94px 243.99px 117px 153.5px 150px 200px ;
+
+      }
+      .topnav,button {
+        background-color: #640000;
+        overflow: hidden;
+      }
+      .topnav a button{
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .topnav a:hover button{
+        background-color: #f70d10;
+        color: black;
+      }
+      .topnav a.active button{
+        background-color: #b20000;
+        color: white;
+      }
+      .login {
+        border-radius:5px;
+        background:#C53A50;
+        width: 43%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 12.5% 27.5%;
+        position: fixed;
+      }
+      .container1 {
+        position: absolute;
+        margin: 20px;
+        width: auto;
+      }
+      .topnav1 {
+        overflow: hidden;
+        background-color: #333;
+        border-radius:5px;
+      }
+      .topnav1 a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav1 a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      #active{
+        background:#C53A50;
+        border:1px solid black;
+      }
+
+			form {
+				margin: 0 auto;
+				width: 600px;
+			}
+      input{
+        border-radius: 6px;
+        width: 280px;
+        height: 30px;
+      }
+      #sub{
+        align-self:center;
+        width:auto;
+      }
+      h1{
+        align:center;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="homepage.php"> <img src="https://surreyandsussex.nhs.uk/wp-content/uploads/2013/11/2013-11_Your-Hospital_Logo-full-PNG24.png" alt="LOGO" width="150" height="48"></a>
+      <a href="homepage.php"><button type="button" name="button">HOME</button></a>
+      <a href="patient.html"><button type="button" name="button">PATIENT REGISTRATION</button></a>
+      <a href="doctor.php"><button type="button" name="button">DOCTOR</button></a>
+      <!-- <a href="about.html"><button type="button" name="button">ABOUT US</button></a> -->
+      <a href="contact.html"><button type="button" name="button">CONTACT US</button></a>
+      <a href="ambulance.php"><button type="button" name="button">AMBULANCE</button></a>
+      <a class="active" href="login.html"><button type="button" name="button">LOGIN</button></a>
+    </div>
+    <br><br><br>
+    <div class="login">
+      <div class="container1">
+        <div class="topnav1">
+          <a href="login.html">Patient Login</a>
+          <a href="login_doct.html">Doctor Login</a>
+          <a id="active" href="login_staff.html">Staff Login</a>
+        </div>
+        <div class="divform">
+          <form class="myForm" action="staff_inter.php" method="post">
+            <br>
+            <h1 align="center">Staff Login</h1>
+            <br>
+            &nbsp;&nbsp;
+            <label for="id">EMAIL ID:  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </label>
+            <input type="email" name="id" value="" placeholder="abc@gmail.com" required>
+            <br><br>
+            &nbsp;&nbsp;
+            <label for="pass">PASSWORD: &nbsp; &nbsp;&nbsp;  </label>
+            <input type="password" name="pass" value="" placeholder="PASSWORD" required>
+            <br><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id='sub' align='center' type="submit" name="" value="SUBMIT">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
